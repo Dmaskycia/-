@@ -110,8 +110,8 @@
 <body>
 
 <div class="container">
-  <h1>🧮 Calculadora de Atrasos 0,5 %</h1>
-  <p>Introduce el importe bruto mensual completo de tu nómina (incluye base, destino, específico...)</p>
+  <h1>🧮 Calculadora de Atrasos 0,5 % desde 1 enero 2024</h1>
+  <p>Introduce el importe bruto mensual completo de tu nómina (incluye base, destino, específico...) SIMULACRO ORIENTATIVO</p>
 
   <label for="nomina">Nómina mensual bruta (€):</label>
   <input type="number" id="nomina" placeholder="Ejemplo: 2150.00" step="0.01">
