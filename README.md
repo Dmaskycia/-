@@ -8,23 +8,32 @@
       box-sizing: border-box;
     }
 
-    body {
-      font-family: "Segoe UI", Roboto, sans-serif;
-      background: #f4f4f4;
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #f4f4f4;
       color: #333;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
     .container {
       background: #ffffff;
       max-width: 500px;
-      margin: auto;
-      margin-top: 30px;
+      width: 100%;
       padding: 25px 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-left: 10px solid #cc0000;
+      box-sizing: border-box;
+      margin: 20px;
     }
 
     h1 {
@@ -85,15 +94,24 @@
 
     .footer {
       text-align: center;
-      margin-top: 20px;
+      margin: 15px auto 20px auto;
       font-size: 12px;
       color: #777;
-      padding-bottom: 20px;
+      width: 100%;
+      max-width: 500px;
+      padding: 0 15px;
+    }
+
+    @media (max-height: 650px) {
+      body {
+        align-items: flex-start;
+        padding-top: 10px;
+      }
     }
 
     @media (max-width: 480px) {
       .container {
-        margin: 15px;
+        margin: 10px;
         padding: 20px 15px;
       }
 
@@ -111,7 +129,7 @@
 
 <div class="container">
   <h1>🧮 Calculadora de Atrasos 0,5 % desde 1 enero 2024</h1>
-  <p>Introduce el importe bruto mensual completo de tu nómina (incluye base, destino, específico...) SIMULACRO ORIENTATIVO</p>
+  <p>Introduce el importe bruto mensual completo de tu nómina (incluye base, destino, específico...)<br><strong>SIMULACRO ORIENTATIVO</strong></p>
 
   <label for="nomina">Nómina mensual bruta (€):</label>
   <input type="number" id="nomina" placeholder="Ejemplo: 2150.00" step="0.01">
