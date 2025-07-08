@@ -1,8 +1,8 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Calculadora de Atrasos 0,5 %</title>
+  <title>Calculadora de Atrasos 0,5â€¯%</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -92,10 +92,11 @@
 <body>
 
 <div class="container">
-  <h1>🧮 Calculadora de Atrasos 0,5 %</h1>
-  <p>Introduce el importe bruto mensual completo de tu nómina (incluyendo base, destino, específico...)</p>
+  <h1>ðŸ§® Calculadora de Atrasos 0,5â€¯% desde el 1 enero 2024.
+  </h1>
+  <p>Introduce el importe bruto mensual completo de tu nÃ³mina (incluyendo base, destino, especÃ­fico...)  SIMULACRO ORIENTATIVO</p>
 
-  <label for="nomina">Nómina mensual bruta (€):</label>
+  <label for="nomina">NÃ³mina mensual bruta (â‚¬):</label>
   <input type="number" id="nomina" placeholder="Ejemplo: 2150.00" step="0.01">
 
   <button onclick="calcular()">Calcular atrasos</button>
@@ -104,29 +105,29 @@
 </div>
 
 <div class="footer">
-  CCOO FSC Región de Murcia · Elaboración propia
+  CCOO FSC RegiÃ³n de Murcia Â· ElaboraciÃ³n propia
 </div>
 
 <script>
 function calcular() {
   const nomina = parseFloat(document.getElementById('nomina').value);
   if (isNaN(nomina) || nomina <= 0) {
-    alert("Introduce una cifra válida.");
+    alert("Introduce una cifra vÃ¡lida.");
     return;
   }
 
   const subidaMensual = nomina * 0.005;
 
   const hoy = new Date();
-  const añoActual = hoy.getFullYear();
+  const aÃ±oActual = hoy.getFullYear();
   const mesActual = hoy.getMonth() + 1;
 
   const meses2024 = 12;
-  const meses2025 = (añoActual === 2025) ? mesActual : (añoActual > 2025 ? 12 : 0);
+  const meses2025 = (aÃ±oActual === 2025) ? mesActual : (aÃ±oActual > 2025 ? 12 : 0);
   const totalMensualidades = meses2024 + meses2025;
 
   let pagasExtras = 2; // junio y diciembre 2024
-  if (añoActual > 2025 || (añoActual === 2025 && mesActual >= 6)) {
+  if (aÃ±oActual > 2025 || (aÃ±oActual === 2025 && mesActual >= 6)) {
     pagasExtras += 1;
   }
 
@@ -137,10 +138,10 @@ function calcular() {
   const resultado = document.getElementById("resultado");
   resultado.style.display = "block";
   resultado.innerHTML = `
-    <strong>📈 Subida mensual (0,5 %):</strong> ${subidaMensual.toFixed(2)} €<br><br>
-    <strong>🗓️ Meses con atrasos:</strong> ${totalMensualidades} → <strong>${atrasosMensuales.toFixed(2)} €</strong><br>
-    <strong>🎁 Pagas extra incluidas:</strong> ${pagasExtras} → <strong>${atrasosExtras.toFixed(2)} €</strong><br><br>
-    <span class="resaltado">💰 Total atrasos a percibir: ${atrasosTotales.toFixed(2)} €</span>
+    <strong>ðŸ“ˆ Subida mensual (0,5â€¯%):</strong> ${subidaMensual.toFixed(2)}â€¯â‚¬<br><br>
+    <strong>ðŸ—“ï¸ Meses con atrasos:</strong> ${totalMensualidades} â†’ <strong>${atrasosMensuales.toFixed(2)}â€¯â‚¬</strong><br>
+    <strong>ðŸŽ Pagas extra incluidas:</strong> ${pagasExtras} â†’ <strong>${atrasosExtras.toFixed(2)}â€¯â‚¬</strong><br><br>
+    <span class="resaltado">ðŸ’° Total atrasos a percibir: ${atrasosTotales.toFixed(2)}â€¯â‚¬</span>
   `;
 }
 </script>
